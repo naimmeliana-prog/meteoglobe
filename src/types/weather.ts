@@ -5,8 +5,8 @@ export interface Satellite {
   coverage: string;
   type: 'Geostationary' | 'Polar Orbiting' | 'Radar Constellation';
   status: 'Active' | 'Optimal' | 'Calibrating';
-  weight: number; // Ensemble weighting factor (0-1)
-  mlAccuracy: number; // % accuracy from ML algorithm
+  weight: number;
+  mlAccuracy: number;
   lastUpdate: string;
 }
 
@@ -22,21 +22,21 @@ export interface CityForecast {
   feelsLike: number;
   weatherCondition: string;
   icon: 'sun' | 'rain' | 'cloud' | 'thunder' | 'wind' | 'snow';
-  rainProbability: number; // percentage
+  rainProbability: number;
   precipitationMm: number;
-  windSpeed: number; // km/h
+  windSpeed: number;
   windDirection: string;
   windDeg: number;
   humidity: number;
   uvIndex: number;
-  pressure: number; // hPa
+  pressure: number;
   alertLevel: 'none' | 'yellow' | 'orange' | 'red';
   alertType?: string;
   alertDescription?: string;
 }
 
 export interface HourlyComparisonData {
-  time: string; // e.g. "00:00", "03:00"
+  time: string;
   actualStationTemp: number;
   ensembleTemp: number;
   goes16Temp: number;
